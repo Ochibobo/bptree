@@ -143,7 +143,7 @@ isRemoved = tree.remove(10); // Returns `false`
 ```
 
 ### Clear the entire tree
-Currently, all this does is et the tree's root node to point to a new node with the same `degree`. It doesn't remove the previous tree object from memory. The result is a new `clean` tree.
+Currently, all this does is set the tree's root node to point to a new node with the same `degree`. It doesn't remove the previous tree object from memory. The result is a new `clean` tree.
 
 __API:__ `clear()`
 ```D
@@ -201,6 +201,11 @@ Returns the following:
 (2)
         1 one
         0 zero
+
 */
 ```
+
+## License
+
+`bptree.d` is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
