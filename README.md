@@ -1,8 +1,8 @@
 ## B+tree implementation in D
 
-<div style="text-align:center">
+<p align="center">
         <img src="./assets/logo.png" alt="drawing" style="width:200px;"/>
-</div>
+</p>
 
 <br/>
 
