@@ -343,11 +343,6 @@ class BPtree(K, V)
         return this.size;
     }
 
-    Node* getRoot()
-    {
-        return this.root;
-    }
-
     /**
         Add an element to the BPtree.
 
