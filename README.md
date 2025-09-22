@@ -148,6 +148,14 @@ tree.clear(); // Returns void.
 tree.get(1); // `Nullable.null.`
 ```
 
+### Get the tree's minimum degree
+
+__API:__ `getMinimumDegree`
+
+```
+tree.getMinimumDegree // Returns `2`
+```
+
 ### Get the size of the tree
 Size here refers to the total number of entries in the leaf nodes. These are essentially entries with associated values.
 
