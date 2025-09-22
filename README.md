@@ -1,5 +1,11 @@
 ## B+tree implementation in D
 
+<div style="text-align:center">
+        <img src="./assets/logo.png" alt="drawing" style="width:200px;"/>
+</div>
+
+<br/>
+
 This is an in-memory implementation of the `B+Tree` Data structure in the `D` language.
 
 ### Initialization
