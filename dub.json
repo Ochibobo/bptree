@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Ochibobo"
+	],
+	"copyright": "Copyright © 2025, Ochibobo",
+	"description": "In-memory b+tree in D",
+	"license": "MIT",
+	"name": "bptree"
+}

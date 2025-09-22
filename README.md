@@ -1,0 +1,47 @@
+#### Btree implementation in D
+
+- We'll kick off with `Btrees` then implement the `B+tree`.
+  - The major change is having pointers on the leaf nodes.
+- The goal here is to support `range searches`.
+- The pointers in the child nodes are assigned during node splits and only on leaf nodes. They are removed on node merges.
+- Leaf nodes can maintains 2 pointers: a prev & next leaf node pointer.
+  - This will make deletions easier.
+- Equality is only used in the leaf node.
+- The node will have entries.
+  - The minimum degree is D.
+  - This means the number of keys in a node is between D - 1 & 2D - 1.
+- Make sure the keys implement (<, ==)
+- We implement `delete` too.
+  - This comes with `merging` nodes with keys less than `D/2`
+  - This is the hard part
+- Support for concurrency
+  - Let this come in `v2`
+- Notice the algorithm used in [this Java implementation](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BTree.java.html) for inserts. It's quite clever, we may borrow from it.
+- Also consider [this Go implementation](https://github.com/google/btree/blob/master/btree.go)
+- Range queries should allow for:
+  - Greater Than
+  - Less Than
+  - Greater Than or Equal To
+  - Less Than or Equal To
+  - Between Lower Bound & Upper Bound
+  - Between Lower Bound Inclusive & Upper Bound
+  - Between Lower Bound & Upper Bound Inclusive
+  - Between Lower Bound Inclusive & upper Bound Inclusive
+- `Leaf Nodes` will have 2 more pointers:
+  - `prev` to the previous `leaf` node to it.
+  - `next` to the next `leaf` node to it.
+- `Height` and `Depth` are the same thing here.
+  - Counted from the leaf nodes.
+- The structure may consider the `associative arrays` implementation.
+- A node will have `entries`
+  - `Entries` will have `keys` and `values` with a pointer to the `child` node. The `value` is `null` for `internal nodes` and the `child` pointer is `null` for `leaf nodes`.
+- We may not need a `boolean` to indicate `leaf nodes`.
+  - Instead, we can work with the `height` of the tree in reverse.
+- Work on examples with varying tree `degrees`.
+- Accompany documentation with `asymptotic analysis`.
+- We don't check key nullability.
+  - Deletes are explicit.
+  - Find a way to define missing value though the Key is there and nothing.
+
+TODO:
+- [ ] Add static check for `equality` and `lessThan` support for keys.
